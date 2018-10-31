@@ -7,7 +7,7 @@ const resolvers = require("./schema/resolvers");
 let server = new GraphQLServer({
   typeDefs,
   resolvers,
-  context: s => s
+  context: ({ request }) => request
 });
 
 // let app = server.express;
